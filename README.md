@@ -1,6 +1,6 @@
-# Transaction Tracker Script
+# ctfs.com Personal Finance Transaction Tracker
 
-This script parses Canadian Tire Financial Services (ctfs.com) PDF statement files and extracts the relevant transaction information to save in an Excel file. It uses `pdfplumber` for PDF extraction, `pandas` for data manipulation, and `logging` for debug information.
+This script parses Canadian Tire Financial Services (ctfs.com) PDF statement files and extracts the relevant transaction information which is then categorized and appended to an Excel file. This information can then be used to create pivot tables and charts to track and understand trends in your personal spending habits. It uses `pdfplumber` for PDF extraction, `pandas` for data manipulation, and `logging` for debug information.
 
 ## Prerequisites
 
