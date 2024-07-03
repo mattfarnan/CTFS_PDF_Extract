@@ -133,4 +133,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Feel free to modify the script according to your requirements. For any issues or improvements, please open an issue or submit a pull request.
 
 Happy Tracking!
-```
