@@ -1,4 +1,3 @@
-```markdown
 # Transaction Tracker Script
 
 This script parses Canadian Tire Financial Services (ctfs.com) PDF statement files and extracts the relevant transaction information to save in an Excel file. It uses `pdfplumber` for PDF extraction, `pandas` for data manipulation, and `logging` for debug information.
@@ -17,7 +16,7 @@ First, ensure you have Python 3.x installed. Then, install the required librarie
 
 ```sh
 pip install pdfplumber pandas openpyxl xlsxwriter
-```
+
 
 ## Usage
 
