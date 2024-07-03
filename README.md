@@ -40,7 +40,7 @@ pip install pdfplumber pandas openpyxl xlsxwriter
 Run the script using the following command:
 
 ```sh
-python transaction_tracker.py
+python ImportTransactions.py
 ```
 
 ## Logging
