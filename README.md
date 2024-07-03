@@ -130,6 +130,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
+This script was generated with the assistance of ChatGPT, a language model created by OpenAI.
+
 Feel free to modify the script according to your requirements. For any issues or improvements, please open an issue or submit a pull request.
 
 Happy Tracking!
