@@ -158,13 +158,15 @@ def save_to_excel(cleaned_data, excel_path):
 
 def process_pdfs(folder_path, excel_path):
     files = [f for f in os.listdir(folder_path) if f.endswith('.pdf')]
+    cleaned_data = []
     for file in files:
         pdf_path = os.path.join(folder_path, file)
         logging.info(f"Processing file: {pdf_path}")
         text = extract_transactions(pdf_path)
         transactions = parse_text(text)
-        cleaned_data = clean_transactions(transactions)
-        save_to_excel(cleaned_data, excel_path)
+        monthly_data=clean_transactions(transactions)
+        cleaned_data.extend(monthly_data)
+    save_to_excel(cleaned_data, excel_path)
 
 def main():
     folder_path = '/<path_to_PDF_directory>/PDFs/'
