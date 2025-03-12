@@ -4,9 +4,9 @@
 
 
 category_mapping = {
-    "GROCERY STORE": ("Grocery", "Living Expenses"),
-    "RESTAURANT": ("Restaurant", "Dining"),
-    "PARKING": ("Parking and Tolls", "Automotive"),
-    "LOCAL GYM": ("Fitness", "Health"),
-    "HOME STORE": ("Home Stores", "House"),
+    "GROCERY STORE": ("GROCERY STORE", "Grocery", "Living Expenses"),
+    "RESTAURANT": ("RESTAURANT", "Restaurant", "Dining"),
+    "PARKING": ("PARKING", "Parking and Tolls", "Automotive"),
+    "LOCAL GYM": ("LOCAL GYM", "Fitness", "Health"),
+    "HOME STORE": ("HOME STORE", "Home Stores", "House"),
 }
