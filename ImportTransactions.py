@@ -5,7 +5,7 @@ import os
 import logging
 import re
 
-# Import category mapping dictionary from category_mapping.py
+# Import category_mapping from the separate file
 from category_mapping import category_mapping
 
 # Set up logging
@@ -28,7 +28,7 @@ def extract_year_from_text(text):
         return "2020"  # Fallback to 2020 if year not found
 
 def line_contains_transaction(line):
-    # Match lines with dates and amounts
+    # Improved logic to identify transaction lines using regular expressions
     pattern = re.compile(r'(\b\w{3} \d{2}\b).+?(-?[\d,]+\.\d{2}\b)')
     return bool(pattern.search(line))
 
@@ -154,11 +154,11 @@ def save_to_excel(cleaned_data, excel_path):
         date_format = workbook.add_format({'num_format': 'yyyy-mm-dd'})
         worksheet.set_column('B:B', None, date_format)
     
-    logging.info("Transactions successfully saved to Excel.")
+    logging.info("Transactions successfully saved to Excel with correct date format.")
 
 def process_pdfs(folder_path, excel_path):
-    files = [f for f in os.listdir(folder_path) if f.endswith('.pdf')]
     cleaned_data = []
+    files = [f for f in os.listdir(folder_path) if f.endswith('.pdf')]
     for file in files:
         pdf_path = os.path.join(folder_path, file)
         logging.info(f"Processing file: {pdf_path}")
@@ -167,11 +167,11 @@ def process_pdfs(folder_path, excel_path):
         monthly_data=clean_transactions(transactions)
         cleaned_data.extend(monthly_data)
     save_to_excel(cleaned_data, excel_path)
-
+    
 def main():
     folder_path = '/<path_to_PDF_directory>/PDFs/'
     excel_path = '/<path_to_Excel_sheet>/Transactions.xlsx'
-    
+
     process_pdfs(folder_path, excel_path)
 
 if __name__ == "__main__":
